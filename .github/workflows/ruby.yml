@@ -7,16 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+
+    - name: Setup Ruby for use with actions
+      uses: actions/setup-ruby@50f3cc9f0b0ab0fc1ed658c07aee4b1d61970143 # v1.1.0
       with:
-        ruby-version: 2.6.x
+        ruby-version: '2.6.x'
+
     - name: Build and test with Rake
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake
-    - name: Setup Ruby for use with actions
-      uses: actions/setup-ruby@50f3cc9f0b0ab0fc1ed658c07aee4b1d61970143 # v1.1.0
-      with:
-        ruby-version: '2.6.x'
+
+    - name: Rubocop checks
+      uses: gimenete/rubocop-action@649c2b18b5726302b6b120dad74c25d2b2f391e9 # v1.0

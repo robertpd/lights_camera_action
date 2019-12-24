@@ -1,4 +1,6 @@
-#Dir.glob(File.join('lib/tasks/**/*.rake')).each { |file| load file }
+# frozen_string_literal: true
+
+# Dir.glob(File.join('lib/tasks/**/*.rake')).each { |file| load file }
 
 task default: %w[test_rake_command]
 
