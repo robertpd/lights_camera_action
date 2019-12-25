@@ -13,10 +13,10 @@ jobs:
       with:
         ruby-version: '2.6.x'
 
-     - name: Secrets and stuff
-       with: 
-         super_secret: ${{ secrets.test_secret}}
-       run: echo This is a: $super_secret
+    - name: Secrets and stuff
+      with: 
+        super_secret: ${{ secrets.test_secret}}
+      run: echo This is a: $super_secret
 
 #    - name: Build and test with Rake
 #      run: |
