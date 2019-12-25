@@ -21,3 +21,6 @@ jobs:
 
     - name: Rubocop checks
       uses: gimenete/rubocop-action@649c2b18b5726302b6b120dad74c25d2b2f391e9 # v1.0
+
+    - name: Github actions environment variables
+      run: echo $GITHUB_REPOSITORY
