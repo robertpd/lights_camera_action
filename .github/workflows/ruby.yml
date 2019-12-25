@@ -16,5 +16,6 @@ jobs:
     - name: Secrets and stuff
       env: 
         super_secret: ${{ secrets.test_secret}}
-      run: echo This is a: $super_secret
+      run: |
+        echo This is a: $super_secret
 
