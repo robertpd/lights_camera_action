@@ -25,7 +25,7 @@ jobs:
 #    - name: Github actions environment variables
 #      run: echo $GITHUB_REPOSITORY
     
-     - name: secrets
+     - name: Secrets and stuff
        with: 
          super_secret: ${{ secrets.test_secret}}
        run: echo This is a: $super_secret
