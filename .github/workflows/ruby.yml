@@ -13,14 +13,19 @@ jobs:
       with:
         ruby-version: '2.6.x'
 
-    - name: Build and test with Rake
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
+#    - name: Build and test with Rake
+#      run: |
+#        gem install bundler
+#        bundle install --jobs 4 --retry 3
+#        bundle exec rake
 
 #    - name: Rubocop checks
 #      uses: gimenete/rubocop-action@649c2b18b5726302b6b120dad74c25d2b2f391e9 # v1.0
 
-    - name: Github actions environment variables
-      run: echo $GITHUB_REPOSITORY
+#    - name: Github actions environment variables
+#      run: echo $GITHUB_REPOSITORY
+    
+     - name: secrets
+       with: 
+         super_secret: ${{ secrets.test_secret}}
+       run: echo This is a: $super_secret
