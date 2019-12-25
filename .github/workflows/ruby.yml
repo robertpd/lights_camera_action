@@ -14,7 +14,7 @@ jobs:
         ruby-version: '2.6.x'
 
     - name: Secrets and stuff
-      with: 
+      env: 
         super_secret: ${{ secrets.test_secret}}
       run: echo This is a: $super_secret
 
